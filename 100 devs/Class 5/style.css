@@ -20,3 +20,19 @@ header, footer{
     width: 50%;
     float: left;
 }
+.w100{
+    height: 200px;
+    background: teal;
+}
+.w40{
+    height: 300px;
+    width: 40%;
+    float: left;
+    background: pink;
+}
+.w60{
+    height: 300px;
+    width: 60%;
+    float: left;
+    background: gold;
+}
