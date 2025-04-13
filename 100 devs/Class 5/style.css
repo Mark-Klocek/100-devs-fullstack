@@ -1,4 +1,22 @@
-header,footer{
+*{
+    box-sizing: border-box;
+}
+header, footer{
     height: 100px;
     border: 3px solid black;
+    clear: both;
+    
+}
+.w33{
+    height: 200px;
+    border: 3px solid black;
+    width: 33.3333%;
+    float: left;
+    
+}
+.w50{
+    height: 300px;
+    border: 3px solid black;
+    width: 50%;
+    float: left;
 }
