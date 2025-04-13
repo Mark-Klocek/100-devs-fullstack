@@ -36,3 +36,22 @@ header, footer{
     float: left;
     background: gold;
 }
+.w20{
+    height: 400px;
+    width: 20%;
+    background: navy;
+    float: left;
+}
+.h400w40{
+    height: 400px;
+    width: 40%;
+    background: pink;
+    float: left;
+
+}
+.w20 + .w20{
+    height: 400px;
+    width: 20%;
+    background: orange;
+    float: left;
+}
