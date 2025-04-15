@@ -1,0 +1,45 @@
+*{
+    box-sizing: border-box;
+}
+
+header,footer{
+    height: 150px;
+    clear: both;
+}
+section{
+    height: 400px;
+    background: black;
+    width: 33.3333%;
+    float: left;
+    border: 3px solid gold;
+    transition-property: background-color;
+    transition-duration: 1s;
+    transition-timing-function: linear;
+}
+section:hover{
+    background-color: white;
+}
+@media all and (max-width:1200px){
+    section{
+        background: silver;
+        width: 25%;
+        
+        
+    }
+}
+@media all and (max-width:600px){
+    section{
+        background: lightgreen;
+        float: none;
+        width: 100%;
+    }
+}
+@media all and (min-width:2000px){
+    section{
+        background: rgb(192, 79, 98);
+        float: none;
+         width: 100%;
+        border: 3px solid black;
+        
+    }
+}
