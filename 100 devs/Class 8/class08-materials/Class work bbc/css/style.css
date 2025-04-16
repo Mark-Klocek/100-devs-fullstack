@@ -1,0 +1,102 @@
+/* Box Model Hack */
+* {
+  box-sizing: border-box;
+}
+
+/* Clear fix hack */
+.clearfix:after {
+     content: ".";
+     display: block;
+     clear: both;
+     visibility: hidden;
+     line-height: 0;
+     height: 0;
+}
+
+.clear {
+	clear: both;
+}
+
+/******************************************
+/* BASE STYLES
+/*******************************************/
+
+
+/******************************************
+/* LAYOUT
+/*******************************************/
+header{
+  width: 100%;
+  height: 50px;
+  background: black;
+  float: left;
+  color: white;
+
+}
+nav *{
+  float: left;
+  width: 10%;
+  display: block;
+  color: white;
+  height: 50px;
+}
+header >form{
+  width: 5%;
+  float: left;
+}
+
+header > nav > ul{
+  list-style: none;
+  width: 60%;
+}
+main section{
+  
+  border: 2px solid rgb(196, 50, 50);
+  float: left;
+  width: 50%;
+}
+main + section{
+  height: 300px;
+  width: 50%;
+  float: left;
+  border: 2px solid pink;
+}
+main + section *{
+  height: 100%;
+  width: 50%;
+  float: left;
+  border: 2px solid blue;
+}
+main + section + section{
+  height: 300px;
+  width: 50%;
+  float: left;
+  border: 2px solid pink;
+}
+main + section + section *{
+  width: 50%;
+  float: left;
+  height: 50%;
+  border: 2px solid black;
+}
+h3{
+  color: black;
+  float: left;
+  margin: 0;
+  height: 25px;
+}
+h3 + section{
+  width: 100%;
+  height: 300px;
+  border: 2px solid green;
+  float: left;
+}
+h3 + section div{
+  border: 2px solid black;
+  height: 100%;
+  width: 33.3333%;
+  float: left;
+}
+/******************************************
+/* ADDITIONAL STYLES
+/*******************************************/
