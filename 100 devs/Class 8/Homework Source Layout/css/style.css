@@ -21,10 +21,35 @@
 /* BASE STYLES
 /*******************************************/
 
-body {
+body *{
+     float: left;
 
 }
-
+nav {
+     width: 100%;
+     border: 1px solid black;
+     
+     
+}
+nav > a{
+     width: 25%;
+}
+ul{
+     width: 40%;
+     border: 1px solid black;
+     height: 100%;
+}
+li{
+     width: 25%;
+}
+nav>div, nav>div>a{
+     width: 25%;
+     
+     float: right;
+     
+     
+}
+a{}
 
 /******************************************
 /* LAYOUT
