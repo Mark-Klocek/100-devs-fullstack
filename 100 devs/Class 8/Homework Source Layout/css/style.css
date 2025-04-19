@@ -49,7 +49,20 @@ nav>div, nav>div>a{
      
      
 }
-a{}
+#section1{
+     width: 100%;
+     height: 400px;
+}
+#section1 > div{
+     width: 40%;
+     height: 100%;
+     
+}
+#section1 > div + div{
+     height: 400px;
+     width: 60%;
+     background: salmon;
+}
 
 /******************************************
 /* LAYOUT
