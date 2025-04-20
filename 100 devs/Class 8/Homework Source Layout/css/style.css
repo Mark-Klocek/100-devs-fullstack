@@ -38,6 +38,7 @@ ul{
      width: 40%;
      border: 1px solid black;
      height: 100%;
+     list-style: none;
 }
 li{
      width: 25%;
@@ -63,7 +64,15 @@ nav>div, nav>div>a{
      width: 60%;
      background: salmon;
 }
-
+#section3{
+     height: 200px;
+     width: 100%;
+     background: lightblue;
+}
+#section3 > div{
+     width: 25%;
+     padding: 5px;
+}
 /******************************************
 /* LAYOUT
 /*******************************************/
