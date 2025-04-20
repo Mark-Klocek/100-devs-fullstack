@@ -63,6 +63,7 @@ nav>div, nav>div>a{
      height: 400px;
      width: 60%;
      background: salmon;
+     float: left;
 }
 #section3{
      height: 200px;
@@ -91,6 +92,7 @@ nav>div, nav>div>a{
      }
      #section1 > div + div{
           width: 100%;
+          float: none;
      }
 }
 /******************************************
