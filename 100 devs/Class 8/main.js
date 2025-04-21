@@ -8,21 +8,21 @@ console.warn('This is a warning');
 
 
 // VARIABLES - var, let, const
-let age = 30;
+// let age = 30;
 
 // let can be re-assigned, const can not
 age = 31;
 
 
 // DATA TYPES - String, Number, Boolean, null, undefined
-const name = 'Brad';
-const age = 37;
-const rating = 3.5;
-const isCool = true;
-const x = null;
-const y = undefined;
-let z; // undefined
 
+// const age = 37;
+// const rating = 3.5;
+// const isCool = true;
+// const x = null;
+// const y = undefined;
+// let z; // undefined
+// const name = 'Brad';
 // Check type
 console.log(typeof z);
 
@@ -250,7 +250,7 @@ Person.prototype.getFullName = function() {
 
 
 // Instantiate an object from the class
-const person1 = new Person('John', 'Doe', '7-8-80');
+// const person1 = new Person('John', 'Doe', '7-8-80');
 const person2 = new Person('Steve', 'Smith', '8-2-90');
 
 console.log(person2);
@@ -328,10 +328,10 @@ btn.addEventListener('click', e => {
 });
 
 // Keyboard Event
-const nameInput = document.querySelector('#name');
-nameInput.addEventListener('input', e => {
-  document.querySelector('.container').append(nameInput.value);
-});
+// const nameInput = document.querySelector('#name');
+// nameInput.addEventListener('input', e => {
+//   document.querySelector('.container').append(nameInput.value);
+// });
 
 
 // USER FORM SCRIPT
