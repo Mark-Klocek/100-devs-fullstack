@@ -101,6 +101,42 @@ nav > ul > li > a{
      border: 1px solid black;
      margin: 10% 0 0 40%;
 }
+#section3{
+     height: 300px;
+     width: 100%;
+     background: lightgreen;
+}
+#section3 > div{
+     width: 65%;
+     height: 100%;
+     border: 1px solid black;
+     margin: 0 0 0 16%;
+}
+#section3 > div > *{
+     width: 50%;
+     height: 100%;
+}
+#section3 > div > div + div{
+     background: gray;
+}
+#section3 > div > div > *{
+     text-align: center;
+}
+#section3 h2{
+     margin: 0 0 0 4%;
+     justify-content: center;
+}
+#section3 p {
+     height: 60%;
+     margin: 10% 10% 0 10%;
+}
+#section3 div>div>div{
+     margin: 0 0 0 5%;
+     width: 25%;
+     height: 15%;
+     background: black;
+     color: white;
+}
 /******************************************
 /* LAYOUT
 /*******************************************/
