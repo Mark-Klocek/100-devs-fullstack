@@ -25,10 +25,13 @@
      height: 100vh;
      display: flex;
      gap: 25px;
+     justify-content: space-evenly;
+     flex-direction: row;
+     
 }
 [class ^= "box-"]{
-     width: 140px;
-     height: 140px;
+     width: 150px;
+     height: 150px;
      background: skyblue;
      border: 2px solid black;
      font-size: 65px;
@@ -36,8 +39,36 @@
      justify-content: center;
      align-items: center;
 }
+.box-2{
+     align-self: flex-end;
+}
+@media screen and (max-width: 600px){
+     [class ^= "box-"]{
+          
+          background: gray;
+     }
+     .container{
+          flex-direction: column;
+          justify-content: space-around;
+          align-items: center;
 
-
+     }
+}
+@media screen and (min-width: 900px){
+     [class ^= "box-"]{
+          
+          background: rgb(33, 223, 96);
+     }
+     .container{
+          flex-direction: column;
+          justify-content: space-around;
+          align-items: center;
+     }
+     .box-2{
+          align-self: flex-start;
+     }
+     
+}
 /******************************************
 /* LAYOUT
 /*******************************************/
