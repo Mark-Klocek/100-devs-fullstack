@@ -1,2 +1,1 @@
-# meta_frontend_course
- This is the coursera course for meta front end pro cert
+This is my repository for the entire 100 devs full stack boot camp.
