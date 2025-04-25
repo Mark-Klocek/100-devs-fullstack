@@ -63,20 +63,31 @@ main section + section section{
 } */
 nav, ul, main{
   display: flex;
-  justify-content: space-around;
 }
-ul{
-  flex-basis: 60%;
-}
-main section{
+main > section:first-child{
   flex-basis: 48%;
 }
-main section + section{
+ul{
+  justify-content: space-between;
+  flex-basis: 60%;
+}
+li{
+  list-style: none;
+  
+}
+li  a{
+  text-decoration: none;
+  color: black;
+}
+main > section + section{
   display: flex;
   flex-wrap: wrap;
-  flex-basis: 50%;  
+  flex-basis: 48%;
 }
-.container{
+main > section + section section{
+  flex-basis: 50%;
+}
+.section3{
   display: flex;
 }
 /******************************************
