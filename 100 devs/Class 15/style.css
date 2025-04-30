@@ -1,0 +1,42 @@
+#container{
+    max-width: 1000px;
+    
+    display: flex;
+    margin: 20% auto;
+    border: 1px solid black;
+    height: auto;
+    flex-wrap: wrap;
+    justify-content: center;
+
+
+}
+body{
+    background-color: lightgray;
+    
+}
+#largeGraph{
+    height: 250px;
+    flex-basis: 70%;
+    background: lightcoral;
+}
+#smallGraph{
+    height: 250px;
+    flex-basis: 30%;
+    background: lightgreen;
+}
+#weightTable{
+    height: 400px;
+    flex-basis: 25%;
+    background: lightblue;
+    min-width: 250px;
+}
+@media screen and (max-width : 500px){
+    #smallGraph{
+        flex-basis: 70%
+    }
+    #largeGraph{
+        
+        flex-basis: 100%;
+        
+    }
+}
