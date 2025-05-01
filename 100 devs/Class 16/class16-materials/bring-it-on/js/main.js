@@ -13,7 +13,7 @@ function subtractFourThenAlert(n1,n2,n3,n4){
 }
 // Create a function that divides one number by another and returns the remainder
 function divideReturnRemainder(n1,n2){
-    return n1/n2
+    return n1 % n2
 }
 // *Conditionals*
 // Create a function that adds two numbers and if the sum is greater than 50 alert Jumanji
@@ -24,7 +24,7 @@ function addTwoReturnJumanji(n1,n2){
 }
 // Create a function that multiplys three numbers and if the product is divisible by 3 alert ZEBRA
 function multiplyThreeNumbersAlertZebra(n1,n2,n3){
-    if ((n1*n2*3) % 3 === 0){
+    if ((n1*n2*n3) % 3 === 0){
         alert('ZEBRA')
     }
 }
