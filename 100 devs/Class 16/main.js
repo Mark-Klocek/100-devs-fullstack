@@ -164,3 +164,52 @@ function fizzBuzz(){
         }
     }
 }
+
+//Write Functions
+function sayHello() {
+    let firstName = prompt('What is your first name?')
+    let lastName = prompt('What is your last name?')
+    const message = `Hello, ${firstName} ${lastName}!`;
+    console.log(message);
+  }
+
+function square1() {
+for(i = 0; i <= 10;i++){
+    console.log(i * i)
+}
+}
+  
+  // Square the given number x
+const square2 = x => (x * x)
+
+function minOfTwoNumbers(n1,n2){
+    if (n1 < n2){
+        console.log(n1)
+
+    }
+    else{
+        console.log(n2)
+    }
+}
+
+function basicCalculator(n1,string,n2){
+    if (string === "+"){
+        console.log(n1 + n2)
+    }
+    else if (string === "-"){
+        console.log(n1-n2)
+    }
+    else if (string === "*"){
+        console.log(n1*n2)
+    }
+    else if (string === "/"){
+        console.log(n1 / n2)
+    }
+}
+
+function areaOfCircle(radius){
+    return Math.PI * (radius ** 2)
+}
+function circumferenceOfCircle(radius){
+    return Math.PI * 2 * radius
+}
