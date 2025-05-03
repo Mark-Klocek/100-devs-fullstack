@@ -73,19 +73,94 @@ function daysInAMonth(n1){
 function addOneSecond(hour,minute,second){
     if ((hour < 0 || hour > 23)||(minute < 0 || minute > 59)||(second < 0 || second > 59)){
         alert('Invalid input, please enter a valid time 0:0:0 -> 23:59:59')
+        return
     }
     second += 1
-    if(second > 59){
+    if(second == 60){
         minute += 1
+        second = 0
+
     }
-    if (minute > 59){
+    if (minute == 60){
         hour +=1
+        minute = 0
     }
-    if (hour > 23){
-        hour = '00'
-        minute = '00'
-        second = '00'
-        console.log(`${hour}:${minute}:${second}`)
+    if (hour == 24){
+        hour = 0
+        minute = 0
+        second = 0
+        
     }
-    
+    return(`${hour}h:${minute}m:${second}s`)
+}
+
+// repeat statements
+
+function carouselFor(n1){
+    for(i=1; i<=n1;i++){
+        console.log(`We have spun ${i} times.`)
+    }
+
+}
+
+function carouselWhile(n1){
+    i = 1
+    while (i <= n1){
+        console.log(`We have spun ${i} times`)
+        i++
+    }
+}
+function parityFor(n1){
+   
+    for(i = 1; i <= n1; i++){
+        if (i % 2 == 0){
+            console.log(`${i} is even`)
+        }
+        else{
+            console.log(`${i} is odd`)
+        }
+    }
+}
+function parityWhile(n1){
+    let i = 1
+    while (i <= n1){
+        if (i % 2 == 0){
+            console.log(`${i} is even.`)
+        }
+        else{
+            console.log(`${i} is odd.`)
+        }
+        i++
+    }
+}
+function inputValidation(){
+    let num = prompt('please enter a number less than 101 and greater than 49')
+    while (num >= 100 || num <= 50){
+        num = prompt('please enter a number less than 101 and greater than 49')
+    }
+}
+
+function multiplicationTable(){
+    let num = prompt('please enter a number between 2 and 9')
+    while(num < 2 || num > 9){
+        num = prompt('please enter a number between 2 and 9')
+    }
+    for(i = 1; i<= 10;i++){
+        console.log(`${num} * ${i} = ${num * i}`)
+    }
+}
+
+function fizzBuzz(){
+    for (i = 1; i <= 100; i++){
+        if (i % 5 == 0 && i % 3 == 0){
+            console.log(`${i} is FIZZBUZZ!`)
+        }
+        else if ( i % 5 == 0 && i % 3 != 0){
+            console.log(`${i} is BUZZ!`)
+
+        }
+        else if (i % 3 == 0){
+            console.log(`${i} is FIZZ!`)
+        }
+    }
 }
