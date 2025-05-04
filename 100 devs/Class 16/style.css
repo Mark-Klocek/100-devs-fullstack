@@ -25,10 +25,10 @@ section{
     border: 1px solid black;
 }
 .bigBox:hover{
-    background:url(https://upload.wikimedia.org/wikipedia/en/7/73/Trollface.png) no-repeat center;
+    background:url(https://picsum.photos/400/200) no-repeat center;
     /* background-image: linear-gradient(black,rebeccapurple,pink); */
     border: 5px solid red;
-    transform: rotate(180deg);
+    
 }
 #button1{
     height: 75px;
