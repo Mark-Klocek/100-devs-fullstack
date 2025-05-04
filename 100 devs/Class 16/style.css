@@ -75,3 +75,15 @@ section{
     }
     
 }
+@media screen and (width > 800px) and (width < 1001px){
+    .bigBox{
+        flex-basis: 33.3333%;
+    }
+    
+}
+@media screen and (width > 1000px) and (width < 1201px){
+    .bigBox{
+        flex-basis: 16.6666%;
+    }
+    
+} 
