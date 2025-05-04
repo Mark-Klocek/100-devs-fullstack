@@ -13,11 +13,52 @@ section{
     display: flex;
     background-color: rgb(102, 100, 97);
     flex-wrap: wrap;
+    justify-content: center;
     
 }
-div{
+.bigBox{
     height: 200px;
     width: 200px;
     background-color: aquamarine;
     border: 1px solid black;
+}
+#button1{
+    height: 100px;
+    width: 150px;
+    background-color: pink;
+    align-content: center;
+    
+    text-align: center;
+}
+#button2{
+    height: 100px;
+    width: 150px;
+    background-color: blue;
+    align-content: center;
+    
+    text-align: center;
+}
+#button3{
+    height: 100px;
+    width: 150px;
+    background-color: white;
+    align-content: center;
+    
+    text-align: center;
+}
+#button4{
+    height: 100px;
+    width: 150px;
+    background-color: green;
+    align-content: center;
+    
+    text-align: center;
+}
+#button5{
+    height: 100px;
+    width: 150px;
+    background-color: rebeccapurple;
+    align-content: center;
+    
+    text-align: center;
 }
