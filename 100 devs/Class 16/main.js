@@ -1,3 +1,68 @@
+document.querySelector('#button1').addEventListener('click', () => changeColor(1))
+document.querySelector('#button2').addEventListener('click', () =>changeColor(2))
+document.querySelector('#button3').addEventListener('click', () =>changeColor(3))
+document.querySelector('#button4').addEventListener('click', () =>changeColor(4))
+document.querySelector('#button5').addEventListener('click', () =>changeColor(5))
+
+
+function changeColor(buttonName){
+    let color = 'aquamarine'
+    if (buttonName == 1){
+        color = 'pink'
+        
+    }
+    else if (buttonName == 2){
+        color = 'blue'
+    }
+    else if (buttonName == 3){
+        color = 'white'
+    }
+    else if (buttonName == 4){
+        color = 'green'
+    }
+    else if (buttonName == 5){
+        color = 'rebeccapurple'
+    }
+    document.getElementById(`button${buttonName}`).style.width = '100px'
+    document.getElementById(`button${buttonName}`).style.height = '100px'
+    const boxList = document.querySelectorAll('.bigBox')
+    for (i=0;i<boxList.length;i++){
+        boxList[i].style.backgroundColor=color
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 //3 2 1 code
 
 function nameAge(name,age){

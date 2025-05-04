@@ -25,43 +25,43 @@ section{
     border: 1px solid black;
 }
 #button1{
-    height: 100px;
-    width: 150px;
+    height: 75px;
+    width: 75px;
     background-color: pink;
     align-content: center;
-    
+    border: 1px solid black;
     text-align: center;
 }
 #button2{
-    height: 100px;
-    width: 150px;
+    height: 75px;
+    width: 75px;
     background-color: blue;
     align-content: center;
-    
+    border: 1px solid black;
     text-align: center;
 }
 #button3{
-    height: 100px;
-    width: 150px;
+    height: 75px;
+    width: 75px;
     background-color: white;
     align-content: center;
-    
+    border: 1px solid black;
     text-align: center;
 }
 #button4{
-    height: 100px;
-    width: 150px;
+    height: 75px;
+    width: 75px;
     background-color: green;
     align-content: center;
-    
+    border: 1px solid black;
     text-align: center;
 }
 #button5{
-    height: 100px;
-    width: 150px;
+    height: 75px;
+    width: 75px;
     background-color: rebeccapurple;
     align-content: center;
-    
+    border: 1px solid black;
     text-align: center;
 }
 @media screen and (max-width:700px){
