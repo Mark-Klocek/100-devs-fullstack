@@ -69,3 +69,9 @@ section{
         flex-basis: 100%;
     }
 }
+@media screen and (width > 700px) and (width < 801px){
+    .bigBox{
+        flex-basis: 50%;
+    }
+    
+}
