@@ -11,6 +11,7 @@ function changeColor(buttonName){
     if (previous !== ''){
         document.getElementById(`button${previous}`).style.width = '75px'
         document.getElementById(`button${previous}`).style.height = '75px'
+        document.getElementById(`button${previous}`).innerText = 'press me!'
     }
     if (buttonName == 1){
         color = 'pink'
@@ -30,10 +31,12 @@ function changeColor(buttonName){
     }
     document.getElementById(`button${buttonName}`).style.width = '100px'
     document.getElementById(`button${buttonName}`).style.height = '100px'
+    document.getElementById(`button${buttonName}`).innerText = 'IM CLICKED!'
     
     const boxList = document.querySelectorAll('.bigBox')
     for (i=0;i<boxList.length;i++){
         boxList[i].style.backgroundColor=color
+        
     }
     previous = buttonName
 }
