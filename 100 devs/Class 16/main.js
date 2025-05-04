@@ -4,10 +4,14 @@ document.querySelector('#button3').addEventListener('click', () =>changeColor(3)
 document.querySelector('#button4').addEventListener('click', () =>changeColor(4))
 document.querySelector('#button5').addEventListener('click', () =>changeColor(5))
 
-let previous = null
+let previous = ''
 function changeColor(buttonName){
     console.log(previous)
     let color = 'aquamarine'
+    if (previous !== ''){
+        document.getElementById(`button${previous}`).style.width = '75px'
+        document.getElementById(`button${previous}`).style.height = '75px'
+    }
     if (buttonName == 1){
         color = 'pink'
         
