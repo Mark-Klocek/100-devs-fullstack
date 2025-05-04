@@ -4,8 +4,9 @@ document.querySelector('#button3').addEventListener('click', () =>changeColor(3)
 document.querySelector('#button4').addEventListener('click', () =>changeColor(4))
 document.querySelector('#button5').addEventListener('click', () =>changeColor(5))
 
-
+let previous = null
 function changeColor(buttonName){
+    console.log(previous)
     let color = 'aquamarine'
     if (buttonName == 1){
         color = 'pink'
@@ -25,10 +26,12 @@ function changeColor(buttonName){
     }
     document.getElementById(`button${buttonName}`).style.width = '100px'
     document.getElementById(`button${buttonName}`).style.height = '100px'
+    
     const boxList = document.querySelectorAll('.bigBox')
     for (i=0;i<boxList.length;i++){
         boxList[i].style.backgroundColor=color
     }
+    previous = buttonName
 }
 
 
