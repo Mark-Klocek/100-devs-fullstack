@@ -35,15 +35,57 @@ body {
     width: 60%;
     height: 0;
     padding-bottom: 60%;
-    background-color: skyblue ;
-    opacity: .7;
+    background-image: radial-gradient(black,purple,lightblue,purple,black) ;
+    opacity: .6;
     border-radius: 10px;
 }
 #gameGrid{
+  padding: 0px 0px 100% 0px;
   height: 0;
-  width: 80%;
-  padding-bottom: 80%;
-  border: 1px solid black;
+  width: 100%;
+ 
+  
+  display: flex;
+  flex-wrap: wrap;
+}
+[id^='grid']{
+  height: 0;
+  width: 33.3333%;
+  padding-bottom: 33.3333%;
+  
+  
+}
+#grid1{
+  border-right: 2px solid black;
+  border-bottom: 2px solid black;
+}
+#grid2{
+  border-right: 2px solid black;
+  border-bottom: 2px solid black;
+}
+#grid3{
+  
+  border-bottom: 2px solid black;
+}
+#grid4{
+  border-right: 2px solid black;
+  border-bottom: 2px solid black;
+}
+#grid5{
+  border-right: 2px solid black;
+  border-bottom: 2px solid black;
+}
+#grid6{
+  
+  border-bottom: 2px solid black;
+}
+#grid7{
+  border-right: 2px solid black;
+  
+}
+#grid8{
+  border-right: 2px solid black;
+  
 }
 /******************************************
 /* LAYOUT
