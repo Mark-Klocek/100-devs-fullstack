@@ -40,12 +40,7 @@ body {
   flex-wrap: wrap;
 }
 
-#controller{
-  height: 80px;
-  width: 800px;
-  background-color: black;
-  opacity: .2;
-}
+
 [id^='grid']{
   height: 0;
   flex-basis: 33.3333%;
@@ -83,6 +78,32 @@ body {
 }
 #grid8{
   border-right: 2px solid black;
+  
+}
+#controller{
+  height: 80px;
+  width: 800px;
+  background-color: transparent;
+  
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+button{
+  height: 80%;
+  width: 25%;
+  background-color: blueviolet;
+  color: black;
+  font-size: 1.6em;
+  
+  
+  
+}
+@media screen and (width > 1200px){
+  #gameBoard{
+    width: 1000px;
+    height: 1000px;
+  }
   
 }
 @media screen and (max-width:800px){
