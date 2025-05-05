@@ -28,30 +28,28 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
 }
 
 #gameBoard{
-  position: relative;
-    width: 60%;
-    height: 0;
-    padding-bottom: 60%;
-    background-image: radial-gradient(black,purple,lightblue,purple,black) ;
-    opacity: .6;
-    border-radius: 10px;
-}
-#gameGrid{
-  padding: 0px 0px 100% 0px;
-  height: 0;
-  width: 100%;
- 
-  
   display: flex;
+  height: 800px;
+  width: 800px;
+  background-image: radial-gradient(black,purple,lightblue,purple,black) ;
+  opacity: .6;
   flex-wrap: wrap;
+}
+
+#controller{
+  height: 80px;
+  width: 800px;
+  background-color: black;
+  opacity: .2;
 }
 [id^='grid']{
   height: 0;
-  width: 33.3333%;
-  padding-bottom: 33.3333%;
+  flex-basis: 33.3333%;
+  height: 33.3333%;
   
   
 }
@@ -87,17 +85,21 @@ body {
   border-right: 2px solid black;
   
 }
-/******************************************
-/* LAYOUT
-/*******************************************/
-header {
-
+@media screen and (max-width:800px){
+  #gameBoard{
+    width: 600px;
+    height: 600px;
+  }
+  #controller{
+    width: 600px;
+  }
 }
-
-footer {
-
+@media screen and (max-width:600px){
+  #gameBoard{
+    width: 400px;
+    height: 400px;
+  }
+  #controller{
+    width: 400px;
+  }
 }
-
-/******************************************
-/* ADDITIONAL STYLES
-/*******************************************/
