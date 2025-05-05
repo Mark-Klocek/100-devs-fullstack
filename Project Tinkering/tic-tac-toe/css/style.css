@@ -22,10 +22,29 @@
 /*******************************************/
 
 body {
-
+  width: 100vw;
+  height: 100vh;
+  background-image: linear-gradient(red,rgb(224, 83, 206),orange);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-
+#gameBoard{
+  position: relative;
+    width: 60%;
+    height: 0;
+    padding-bottom: 60%;
+    background-color: skyblue ;
+    opacity: .7;
+    border-radius: 10px;
+}
+#gameGrid{
+  height: 0;
+  width: 80%;
+  padding-bottom: 80%;
+  border: 1px solid black;
+}
 /******************************************
 /* LAYOUT
 /*******************************************/
