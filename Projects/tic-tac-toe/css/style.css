@@ -42,9 +42,10 @@ body {
 
 
 [id^='grid']{
-  height: 0;
+  
   flex-basis: 33.3333%;
   height: 33.3333%;
+  background-size: contain;
   
   
 }
