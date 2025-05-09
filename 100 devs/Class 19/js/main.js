@@ -144,12 +144,30 @@ console.log(calc.calculate('10 * 12'))
 
 // For instance:
 
-// let john = { name: "John", age: 25 };
-// let pete = { name: "Pete", age: 30 };
-// let mary = { name: "Mary", age: 28 };
+let john = { name: "John", age: 25 };
+let pete = { name: "Pete", age: 30 };
+let mary = { name: "Mary", age: 28 };
 
-// let users = [ john, pete, mary ];
+let users = [ john, pete, mary ];
 
-// let names = /* ... your code */
+let names = users.map(elements => elements.name)
+console.log(names)
 
-// alert( names ); // John, Pete, Mary
+
+//map to objects
+// You have an array of user objects, each one has name, surname and id.
+
+// Write the code to create another array from it, of objects with id and fullName, where fullName is generated from name and surname.
+john = { name: "John", surname: "Smith", id: 1 };
+pete = { name: "Pete", surname: "Hunt", id: 2 };
+mary = { name: "Mary", surname: "Key", id: 3 };
+
+users = [ john, pete, mary ];
+
+let usersMapped = users.map(elements => ({
+    fullName: `${elements.name} ${elements.surname}`,
+    id: elements.id
+})
+
+)
+console.log(usersMapped[0])
