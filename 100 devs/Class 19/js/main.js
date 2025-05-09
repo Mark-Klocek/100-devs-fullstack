@@ -171,3 +171,60 @@ let usersMapped = users.map(elements => ({
 
 )
 console.log(usersMapped[0])
+
+//sort users by age
+// Write the function sortByAge(users) that gets an array of objects with the age property and sorts them by age.
+
+// For instance:
+john = { name: "John", age: 25 };
+pete = { name: "Pete", age: 30 };
+mary = { name: "Mary", age: 28 };
+
+arr = [ pete, john, mary ];
+
+
+function sortByAge(users){
+    users.sort((a,b)=>a.age - b.age)
+}
+sortByAge(arr)
+console.log(arr[1])
+
+//Get Average Age
+// Write the function getAverageAge(users) that gets an array of objects with property age and returns the average age.
+
+// The formula for the average is (age1 + age2 + ... + ageN) / N.
+
+// For instance:
+john = { name: "John", age: 25 };
+pete = { name: "Pete", age: 30 };
+mary = { name: "Mary", age: 29 };
+
+arr = [ john, pete, mary ];
+
+function getAverageAge(users){
+    let total = 0
+    users.map(item => total += item.age)
+    return (total / users.length)
+}
+
+console.log(getAverageAge(arr))
+// Create keyed object from array
+// Let’s say we received an array of users in the form {id:..., name:..., age:... }.
+
+// Create a function groupById(arr) that creates an object from it, with id as the key, and array items as values.
+
+users = [
+  {id: 'john', name: "John Smith", age: 20},
+  {id: 'ann', name: "Ann Smith", age: 24},
+  {id: 'pete', name: "Pete Peterson", age: 31},
+];
+
+function groupById(users){
+    let newUser = users.reduce((newObj,elements) => {
+        newObj[elements.id] = elements
+        return newObj
+    }, {})
+    return newUser
+}
+let usersById = groupById(users);
+console.log(usersById)
