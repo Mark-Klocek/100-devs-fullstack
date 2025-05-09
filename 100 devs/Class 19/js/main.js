@@ -228,3 +228,56 @@ function groupById(users){
 }
 let usersById = groupById(users);
 console.log(usersById)
+
+
+
+// The JSway course work!//
+//Musketeers
+
+// Write a program that:
+
+//     Creates an array named musketeers containing values "Athos", "Porthos" and "Aramis".
+//     Shows each array element using a for loop.
+//     Adds the "D'Artagnan" value to the array.
+//     Shows each array element using the forEach() method.
+//     Remove poor Aramis.
+//     Shows each array element using a for-of loop.
+
+let musketeers = ['Athos','porthos','Aramis']
+for (i=0;i<musketeers.length;i++){
+    console.log(musketeers[i])
+}
+musketeers.push("D'Aragnan")
+musketeers.forEach(element => console.log(element))
+musketeers.splice(2,1)
+for (musketeer of musketeers){
+    console.log(musketeer)
+}
+
+// Sum of Values
+//Write a program that creates the following array, then calculates and shows the sum of its values (42 in that case).
+const myValues = [3, 11, 7, 2, 9, 10];
+
+let sumOfValues = myValues.reduce((newObj, element) => newObj += element, 0)
+console.log(sumOfValues)
+
+
+const values = [3, 11, 7, 2, 9, 10, 14, 8, 1, 6, 13, 4, 5, 12, 15, 17, 18, 16, 19, 20, 21, 22, 24, 23, 25, 26, 28, 27, 29, 30, 31, 33, 32, 34, 35, 36, 37, 39, 38, 40, 41, 43, 42, 44, 45, 46, 47, 48, 49, 50];
+let maxValue = 0
+
+for(const value of values){
+    if (value > maxValue){
+        maxValue = value
+    }
+}
+console.log(maxValue)
+
+
+wordArray = []
+word = prompt('Welcome to the stop game! we keep asking until you type stop, then give you all the words you entered before stop!')
+while (word !== 'stop'){
+    wordArray.push(word)
+    word = prompt('Keep going! we go until you wanna stop')
+}
+
+console.log(wordArray)
