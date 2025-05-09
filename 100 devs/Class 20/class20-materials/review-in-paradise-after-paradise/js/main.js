@@ -12,5 +12,5 @@ function firstOrLastNumber(array){
         alert('We close in an hour')
     }
 }
-let arr=[4,1,2,3,1,2,3,5,2,1,2,3,10,123,123,112,213]
+let arr=[442,1,2,3,1,2,3,5,2,1,2,3,10,123,123,112,213]
 firstOrLastNumber(arr)
