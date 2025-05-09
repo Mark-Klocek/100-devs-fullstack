@@ -117,3 +117,39 @@ console.log(sorted)
 //     No parentheses or complex expressions in this task.
 //     The numbers and the operator are delimited with exactly one space.
 //     There may be error handling if you’d like to add it.
+
+function Calculator(){
+    this.methods = {}
+    this.calculate = function(str){
+        splitStr = str.split(' ')
+        let a = Number(splitStr[0])
+        let operator = splitStr[1]
+        let b = Number(splitStr[2])
+
+        return this.methods[operator](a,b)
+    }
+    this.addMethod = function(oper, func){
+        this.methods[oper] = func
+    }
+
+}
+
+let calc = new Calculator
+calc.addMethod('*',(a,b)=>a*b)
+console.log(calc.calculate('10 * 12'))
+
+//Map to names
+
+// You have an array of user objects, each one has user.name. Write the code that converts it into an array of names.
+
+// For instance:
+
+// let john = { name: "John", age: 25 };
+// let pete = { name: "Pete", age: 30 };
+// let mary = { name: "Mary", age: 28 };
+
+// let users = [ john, pete, mary ];
+
+// let names = /* ... your code */
+
+// alert( names ); // John, Pete, Mary
