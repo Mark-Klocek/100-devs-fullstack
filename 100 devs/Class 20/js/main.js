@@ -81,3 +81,26 @@ function sum(arr){
     return sum
 }
 console.log(sum(range(1, 10)));
+//reverse array
+// Arrays have a reverse method that changes the array by inverting the order in which its elements appear. For this exercise, write two functions, reverseArray and reverseArrayInPlace. The first, reverseArray, should take an array as its argument and produce a new array that has the same elements in the inverse order. The second, reverseArrayInPlace, should do what the reverse method does: modify the array given as its argument by reversing its elements. Neither may use the standard reverse method.
+myArray = ["A", "B", "C","D","E","F"];
+function reverseArray(arr){
+    newArray = []
+    for(let i = arr.length - 1; i>=0 ;i--){
+        newArray.push(arr[i])
+    }
+    return newArray
+}
+console.log(reverseArray(myArray))
+let arrayValue = [1, 2, 3, 4, 5, 6, 5, 4, 3, 2, 1, 2, 3, 4, 2];
+
+function reverseArrayInPlace(arr){
+   for(i = 0; i <= arr.length / 2; i++)[
+    temp = arr[i],
+    arr[i] = arr[arr.length - 1 - i],
+    arr[arr.length - 1 - i] = temp
+   ]
+   return arr
+}
+reverseArrayInPlace(arrayValue);
+console.log(arrayValue);
