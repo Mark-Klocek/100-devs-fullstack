@@ -51,7 +51,7 @@ account.credit(-80)
 console.log(account.describe())
 //modeling a circle
 
-const r = Number(prompt("Enter the circle radius:"));
+const r = 9
 
 const circle = {
     circumference(){
@@ -63,3 +63,21 @@ const circle = {
 }
 console.log(`Its circumference is ${circle.circumference()}`);
 console.log(`Its area is ${circle.area()}`);
+
+/// elequent js
+// the sum of a range
+function range(start,end){
+    let arr = []
+    for (i=start;i<=end;i++){
+        arr.push(i)
+    }
+    return arr
+}
+function sum(arr){
+    let sum = 0
+    for (i=0;i<arr.length;i++){
+        sum = sum + arr[i]
+    }
+    return sum
+}
+console.log(sum(range(1, 10)));
