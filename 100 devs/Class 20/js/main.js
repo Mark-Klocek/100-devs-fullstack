@@ -160,3 +160,55 @@ function nthRecursive(obj,n1){
 
 nthRecursive = nthRecursive(arrayToList([10, 20, 30, 40, 50, 60, 70]), 20)
 console.log(nthRecursive)
+
+function deepEqual(n1,n2){
+    if ((typeof n1 === "object" && n1 !== null) && (typeof n2 === "object" && n2 !== null)){
+        keys1 = Object.keys(n1)
+        keys2 = Object.keys(n2)
+        if (keys1.length === keys2.length){
+            for(i=0;i<keys1.length;i++){
+                if (!keys2.includes(keys1[i])){
+                    return false
+                }
+            for (j=0;j<keys1.length; j++){
+                key = keys1[j]
+                if (!deepEqual(n1[key],n2[key])){
+                    return false
+                }
+            }    
+            return true
+                
+            }
+        }
+        else{
+            return false
+        }
+    }
+    else return n1 === n2
+}
+let obj = {here: {is: "an"}, object: 2};
+console.log(deepEqual(obj, {here: 1, object: 2}));
+console.log(deepEqual(obj, {here: {is: "an"}, object: 2}));
+console.log(deepEqual(1, 1)); // true
+console.log(deepEqual(1, "1")); // false
+
+// null vs object
+console.log(deepEqual(null, {a: 1})); // false
+console.log(deepEqual(null, null)); // true
+
+// shallow equal objects
+console.log(deepEqual({a: 1, b: 2}, {a: 1, b: 2})); // true
+console.log(deepEqual({a: 1, b: 2}, {b: 2, a: 1})); // true
+
+// different keys
+console.log(deepEqual({a: 1}, {b: 1})); // false
+
+// nested objects
+console.log(deepEqual({a: {b: 2}}, {a: {b: 2}})); // true
+console.log(deepEqual({a: {b: 2}}, {a: {b: 3}})); // false
+
+// array vs object
+console.log(deepEqual([1, 2, 3], {0: 1, 1: 2, 2: 3})); // false
+
+// deeply nested difference
+console.log(deepEqual({a: {b: {c: 3}}}, {a: {b: {c: 4}}})); // fals
