@@ -92,7 +92,7 @@ function reverseArray(arr){
     return newArray
 }
 console.log(reverseArray(myArray))
-let arrayValue = [1, 2, 3, 4, 5, 6, 5, 4, 3, 2, 1, 2, 3, 4, 2];
+let arrayValue = [1, 2, 3, 4, 5];
 
 function reverseArrayInPlace(arr){
    for(i = 0; i <= arr.length / 2; i++)[
@@ -104,3 +104,59 @@ function reverseArrayInPlace(arr){
 }
 reverseArrayInPlace(arrayValue);
 console.log(arrayValue);
+// A list
+//Write a function arrayToList that builds up a list structure like the one shown when given [1, 2, 3] as argument. Also write a listToArray function that produces an array from a list. Add the helper functions prepend, which takes an element and a list and creates a new list that adds the element to the front of the input list, and nth, which takes a list and a number and returns the element at the given position in the list (with zero referring to the first element) or undefined when there is no such element.
+arrayValue = [1, 2, 3, 4, 5]
+console.log(arrayValue)
+myObject = null
+function arrayToList(arr){
+    for(i = arr.length -1;i>=0;i--){
+        myObject = {'value':arr[i], 'rest':myObject}
+    }
+    return myObject
+}
+myObject = arrayToList(arrayValue)
+
+console.log(myObject)
+function listToArray(obj){
+    arrayValue = []
+    while (obj !== null){
+        arrayValue.push(obj.value),
+        obj = obj.rest
+
+    }
+    return arrayValue
+}
+arrayValue = listToArray(myObject)
+console.log(arrayValue)
+myObject = null
+function prepend(a, obj){
+    myObject = {'value': a, 'rest':obj}
+    return myObject
+}
+myObject = prepend(10, prepend(20, null))
+console.log(myObject)
+function nth(obj,n1){
+    let num = null
+    for(i=0;i<=n1;i++){
+        num = obj.value,
+        obj = obj.rest
+    }
+    return num
+}
+nthNonRecursive = nth(arrayToList([10, 20, 30, 40, 50, 60, 70]), 3)
+console.log(nthNonRecursive)
+function nthRecursive(obj,n1){
+    if (obj === null){
+        return "index out of range"
+    }
+    if (n1 === 0){
+        return obj.value
+    }
+    else{
+        return nthRecursive(obj.rest, n1-1)
+    }
+}
+
+nthRecursive = nthRecursive(arrayToList([10, 20, 30, 40, 50, 60, 70]), 20)
+console.log(nthRecursive)
