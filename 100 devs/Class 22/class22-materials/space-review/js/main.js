@@ -15,11 +15,12 @@ console.log(reverseString('This is my string, dawg'))
 //Create a function that takes in a string
 //Alert if the string is a palindrome or not
 function palindrome(string){
-    for(i = 0; i<= string.length - 1 / 2;i++){
+    for(i = 0; i<= (string.length - 1) / 2;i++){
         if (string[i] !== string[string.length - 1 - i]){
             return 'not a palindrome'
         }
-        return 'palindrome'
+        
     }
+    return 'palindrome'
 }
-console.log(palindrome('step on no pets live not on evil madam live not on evil step on no pets'))
+console.log(palindrome('step olive not on evil step on no pets'))
