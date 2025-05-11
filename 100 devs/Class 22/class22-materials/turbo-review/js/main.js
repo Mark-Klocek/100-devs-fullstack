@@ -8,7 +8,7 @@ stringAsArray = myString.split(' ')
 function isApple(arr){
     return arr.includes('apple')
 }
-console.log(isApple(stringAsArray))
+myString.search('apple') > -1 ? console.log('yes'):console.log('no')
 // *Functions*
 // Create a function that returns rock, paper, or scissors as randomly as possible
 function rockPaperScissors(){
@@ -52,9 +52,14 @@ console.log(rockPaperScissorChecker('rock',rockPaperScissors()))
 //Create a function that takes an array of choices. Play the game x times where x is the number of choices in the array. Print the results of each game to the console.
 function myFunc(arr,func){
     for (i = 0; i < arr.length;i++){
-        console.log(rockPaperScissorChecker(arr[i],func))
+        botChoice = rockPaperScissors()
+        console.log(rockPaperScissorChecker(arr[i],botChoice))
     }
 }
 myChoices = ['rock','paper','paper','rock','scissors','scissors','scissors','scissors','rock']
 
-myFunc(myChoices,rockPaperScissors())
+function playGameXTimes(arr){
+    arr.forEach((choice)=> console.log(rockPaperScissorChecker(choice,rockPaperScissors())));
+}
+
+console.log(playGameXTimes(myChoices))
