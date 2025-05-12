@@ -107,3 +107,8 @@ function twoHighest(arr) {
   return arr.sort((a,b)=> a-b)
   
 }
+//Remove duplicates from list
+function distinct(a) {
+  let b = new Set(a)
+  return Array.from(b);
+}
