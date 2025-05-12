@@ -73,3 +73,37 @@ function datingRange(age){
   let max = 2 * (age - 7)
   return `${Math.floor(min)}-${Math.ceil(max)}`;
 }
+
+//Regular ball super ball
+class Ball {
+  constructor(ballType = 'regular') {
+    this.ballType = ballType;
+  }
+}
+//Removing Elements
+function removeEveryOther(arr){
+  return arr.filter( (element,index) => index % 2 == 0 );
+}
+//squaring an argument
+function square(num){
+  return num**2
+}
+//count the monkeys
+function monkeyCount(n) {
+  monkeyArray = []
+  for(i = 1; i<= n;i++){
+    monkeyArray.push(i)
+  }
+  return monkeyArray
+}
+//Return Two Highest Values in List
+function twoHighest(arr) {
+  let arrSet = new Set(arr);
+  let newArr = Array.from(arrSet)
+  if (newArr.length > 2){
+      
+      return (newArr.sort((a,b)=>b-a).slice(0,2))
+  }
+  return arr.sort((a,b)=> a-b)
+  
+}
