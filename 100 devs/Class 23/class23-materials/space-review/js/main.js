@@ -15,12 +15,5 @@ function reverseString(str) {
 console.log(reverseString(myString))
 //Create a function that takes in a string
 //Alert if the string is a palindrome or not
-function palindromTest(str){
-    for (let i = 0; i< str.length / 2;i++){
-        if (str[i] !== str[str.length -1 -i]){
-            return 'not a palindrome'
-        }
-    }
-    return 'this is a palindrome'
-}
-console.log(palindromTest(myString))
+const myPalindrome = str => console.log(str === str.split('').reverse().join(''))
+myPalindrome(myString)
