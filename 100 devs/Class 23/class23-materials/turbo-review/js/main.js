@@ -1,9 +1,7 @@
 // *Variables*
 // Declare a variable and assign it to a sentance as a string. Alert if the sentance is a question
-let myString = "this is a sentence"
-if (myString[myString.length -1] == "?"){
-    alert(myString)
-}
+let myString = "this is a sentence?"
+myString.endsWith('?') ? alert(myString): ''
 //Declare a variable, assign it a string of multiple words, replace every "jr. dev" with "software engineer", and print it to the console
 let myNewString = "this is a string with jr. dev, jr. dev, and jr. dev"
 console.log(myNewString.replaceAll("jr. dev","software engineer"))
