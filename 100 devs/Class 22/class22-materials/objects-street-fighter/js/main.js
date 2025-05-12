@@ -8,3 +8,6 @@ function StreeTFighter(name,skill,life,damage){
 
 let Ken = new StreeTFighter('Ken', 'kick',200,30)
 console.log(Ken)
+
+
+//this is an empty line to test my gittiness
