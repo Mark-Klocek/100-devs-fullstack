@@ -112,3 +112,7 @@ function distinct(a) {
   let b = new Set(a)
   return Array.from(b);
 }
+//get ascii value of character
+function getASCII(c){
+  return c.charCodeAt(0)
+}
