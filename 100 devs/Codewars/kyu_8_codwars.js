@@ -145,3 +145,7 @@ function betterThanAverage(classPoints, yourPoints) {
 function quote(fighter) {
   return fighter.toLowerCase() === 'george saint pierre' ? "I am not impressed by your performance.": "I'd like to take this chance to apologize.. To absolutely NOBODY!"
 };
+//Regexp Basics - is it a digit?
+String.prototype.digit = function() {
+  return this.length === 1 && this >= '0' && this <= '9';
+};
