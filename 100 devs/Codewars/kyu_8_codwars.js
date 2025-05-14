@@ -229,3 +229,9 @@ function check(a, x) {
   return a.includes(x)
 }
 console.log(check(testArray,testString))
+// Add Length
+testString = "you will win"
+function addLength(str) {
+  return str.split(' ').map((element) => element + ' '+ element.length)
+}
+console.log(addLength(testString))
