@@ -198,3 +198,11 @@ function order(words){
 }
 
 console.log(order('th1s i3s m4y st2ring'))
+
+//sort and star
+sortAndStarString = ["turns", "out", "random", "test", "cases", "are", "easier", "than", "writing", "out", "basic", "ones"]
+function twoSort(s) {
+  return s.sort()[0].split('').join('***')
+}
+
+console.log(twoSort(sortAndStarString))
