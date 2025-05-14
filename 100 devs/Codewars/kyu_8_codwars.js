@@ -180,11 +180,11 @@ var countBits = function(n) {
   }
   return counter
 };
-testString = "is2 Thi1s T4est 3a"
+//Your order, please
 function order(words){
   let brokenArray = words.split(' ')
   let newArray = []
-  brokenArray.map((element) =>{
+  brokenArray.forEach((element) =>{
     for (i = 0; i < element.length ; i++){
       if (!isNaN(element[i])){
           newArray[element[i]-1] = element
@@ -196,4 +196,5 @@ function order(words){
   return newArray.join(' ')
   
 }
-console.log(order(testString))
+
+console.log(order('th1s i3s m4y st2ring'))
