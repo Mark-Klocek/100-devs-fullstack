@@ -252,3 +252,18 @@ function findAverage(array) {
    
 }
 console.log(findAverage([1,2,3,4]))
+//Take an Arrow to the knee, Functionally
+const arrowFunc = function(arr) {
+  return arr.map(element =>String.fromCharCode(element)).join('');
+}
+console.log(arrowFunc([84,101,115,116]))
+
+function all( arr, func ){
+  for (i = 0; i < arr.length ; i++){
+    if (!func(arr[i])){
+      return false
+    }
+  }
+  return true
+}
+console.log(all([1, 2, 3, 4, 5], function(v) { return v > 9; }))
