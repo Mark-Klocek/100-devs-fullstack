@@ -288,3 +288,17 @@ function solution(number){
   return strArray.join('')
 }
 console.log(solution(1666))
+function logicalCalc(array, op){
+  opMap = {
+    'AND' : (a,b) => a && b,
+    'OR' : (a,b) => a || b,
+    'XOR' : (a,b) => a !== b
+  }
+  if (Object.keys(opMap).includes(op)){
+    return array.reduce(opMap[op])
+  }
+  else{
+    return 'invalid operator'
+  }
+}
+console.log(logicalCalc([true, true, false, false], "AND"))
