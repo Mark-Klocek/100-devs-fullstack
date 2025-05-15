@@ -241,3 +241,14 @@ function maps(x){
   return x.map(element => element * 2)
 }
 console.log(maps(testArray))
+//Basic Training: Add item to an Array
+var websites = [];
+websites.push('codewars')
+console.log(websites)
+// Calculate Averages
+
+function findAverage(array) {
+  return array.length > 0 ?array.reduce((acc,c) => acc+= c,0) / array.length : 0
+   
+}
+console.log(findAverage([1,2,3,4]))
