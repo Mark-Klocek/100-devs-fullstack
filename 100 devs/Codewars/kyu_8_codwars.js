@@ -257,7 +257,7 @@ const arrowFunc = function(arr) {
   return arr.map(element =>String.fromCharCode(element)).join('');
 }
 console.log(arrowFunc([84,101,115,116]))
-
+//Enumerable Magic #1 - True for All?
 function all( arr, func ){
   for (i = 0; i < arr.length ; i++){
     if (!func(arr[i])){
@@ -267,3 +267,24 @@ function all( arr, func ){
   return true
 }
 console.log(all([1, 2, 3, 4, 5], function(v) { return v > 9; }))
+
+//roman Numerals Encoder
+function solution(number){
+  const thousands = ["", "M", "MM", "MMM"];
+  const hundreds  = ["", "C", "CC", "CCC", "CD", "D", "DC", "DCC", "DCCC", "CM"];
+  const tens      = ["", "X", "XX", "XXX", "XL", "L", "LX", "LXX", "LXXX", "XC"];
+  const ones      = ["", "I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX"];
+
+  let strArray = number.toString().split('')
+  while (strArray.length < 4){
+    strArray.unshift('0')
+  }
+  for(i=0;i<strArray.length;i++){
+    if (i ==0){strArray[i] = thousands[strArray[i]]}
+    if (i ==1){strArray[i] = hundreds[strArray[i]]}
+    if (i ==2){strArray[i] = tens[strArray[i]]}
+    if (i ==3){strArray[i] = ones[strArray[i]]}
+  }
+  return strArray.join('')
+}
+console.log(solution(1666))
