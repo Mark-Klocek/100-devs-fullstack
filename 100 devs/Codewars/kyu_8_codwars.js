@@ -288,6 +288,7 @@ function solution(number){
   return strArray.join('')
 }
 console.log(solution(1666))
+// Logical Calculator
 function logicalCalc(array, op){
   opMap = {
     'AND' : (a,b) => a && b,
@@ -302,3 +303,7 @@ function logicalCalc(array, op){
   }
 }
 console.log(logicalCalc([true, true, false, false], "AND"))
+// How many stairs will suziki climb in 20 years?
+function stairsIn20(s){
+  return ((s.reduce((acc, c) => acc += c.reduce((acc,c) => acc += c,0),0)) * 20)
+}
