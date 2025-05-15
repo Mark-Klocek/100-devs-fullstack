@@ -320,3 +320,18 @@ function findAverage(nums) {
   return (nums.reduce((acc,c) => acc += c,0)/nums.length)
 }
 console.log(findAverage(testArray))
+//Enumerable magic #20 - cascading subsets
+function eachCons(array, n) {
+  finalArray = []
+	for (i = 0; i < array.length; i++){
+    if (i + n <= array.length){
+      finalArray.push(array.slice(i,n+i))
+    }
+    else{
+      return finalArray
+    }
+  }
+  return finalArray
+  
+}
+console.log(eachCons(testArray,1))
