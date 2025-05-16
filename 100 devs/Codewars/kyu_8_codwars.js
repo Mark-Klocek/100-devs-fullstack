@@ -397,3 +397,15 @@ let Ghost = function() {
   possibleColors = ['white','yellow','purple','red']
   this.color = possibleColors[Math.floor(Math.random()*possibleColors.length)]
 };
+//Playing with cubes II
+class Cube {
+  constructor(side=0){
+    this.side = Math.abs(side)
+  }
+  getSide() {
+    return this.side; 
+  }
+  setSide(n) {
+    this.side = Math.abs(n);
+  }
+}
