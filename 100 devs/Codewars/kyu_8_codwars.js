@@ -385,3 +385,15 @@ console.log(toCsvText([[ 0, 1, 2, 3, 45 ],[ 10,11,12,13,14 ],[ 20,21,22,23,24 ],
 class Solution{
 }
 Solution.main = function(){console.log('Hello World!')}
+//Classy Extentions
+class Cat extends Animal {
+  speak = function(){
+    return `${this.name} meows.`
+  }
+  
+}
+//Color Ghost
+let Ghost = function() {
+  possibleColors = ['white','yellow','purple','red']
+  this.color = possibleColors[Math.floor(Math.random()*possibleColors.length)]
+};
