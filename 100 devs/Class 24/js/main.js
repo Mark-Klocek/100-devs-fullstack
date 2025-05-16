@@ -35,3 +35,36 @@ function multiplyNumeric(menu){
     return menu
 }
 console.log(multiplyNumeric(menu))
+let Calculator = {
+    read(a,b) {
+        this.a = a
+        this.b = b
+    },
+    sum(){ 
+        return (this.a + this.b)
+
+    },
+    mul(){
+        return this.a * this.b
+    }
+}
+Calculator.read(12,2)
+console.log(Calculator.sum())
+console.log(Calculator.mul())
+let ladder = {
+  step: 0,
+  up() {
+    this.step++;
+    return this;
+  },
+  down() {
+    this.step--;
+    return this;
+  },
+  showStep() {
+    console.log(this.step);
+    return this;
+  }
+};
+
+ladder.up().up().down().showStep().down().showStep(); // shows 1 then 0
