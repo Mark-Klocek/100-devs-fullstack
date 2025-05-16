@@ -386,12 +386,12 @@ class Solution{
 }
 Solution.main = function(){console.log('Hello World!')}
 //Classy Extentions
-class Cat extends Animal {
-  speak = function(){
-    return `${this.name} meows.`
-  }
+// class Cat extends Animal {
+//   speak = function(){
+//     return `${this.name} meows.`
+//   }
   
-}
+// }
 //Color Ghost
 let Ghost = function() {
   possibleColors = ['white','yellow','purple','red']
@@ -409,3 +409,15 @@ class Cube {
     this.side = Math.abs(n);
   }
 }
+//Classy Classes
+class Person {
+  constructor(name,age) {
+    this.name = name
+    this.age = age
+    this.info = `${name}s age is ${age}`
+  }
+  
+  
+}
+let john = new Person('john', 34)
+console.log(john.info)
