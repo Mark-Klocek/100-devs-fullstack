@@ -357,3 +357,27 @@ function uefaEuro2016(teams, scores){
   return scores[0] > scores[1] ? `At match ${teams[0]} - ${teams[1]}, ${teams[0]} won!` : `At match ${teams[0]} - ${teams[1]}, ${teams[1]} won!`
 }
 console.log(uefaEuro2016(['Germany', 'Ukraine'],[2, 3]))
+console.log(Math.log10(5000))
+//duck duck goose
+function duckDuckGoose(players, goose) {
+  while (goose > Object.keys(players).length){
+    goose -= Object.keys(players).length
+  }
+  return players[goose-1].name
+}
+console.log(duckDuckGoose(['a', 'b', 'c', 'd'], 17))
+//CSV representation of array
+function toCsvText(array) {
+  returnString = ''
+  for (i = 0; i < array.length; i++){
+    if (i < array.length -1){
+      returnString += array[i].join(',')
+      returnString += '\n'
+    }
+    else{
+      returnString += array[i].join(',')
+    }
+  }
+   return returnString
+}
+console.log(toCsvText([[ 0, 1, 2, 3, 45 ],[ 10,11,12,13,14 ],[ 20,21,22,23,24 ],  [ 30,31,32,33,34 ]]))
