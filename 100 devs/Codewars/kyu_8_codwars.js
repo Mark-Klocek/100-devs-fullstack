@@ -421,6 +421,12 @@ class Person1 {
 }
 let john = new Person1('john', 34)
 console.log(john.info)
+
+
+
+///
+/// 5-17-25
+///
 //Fun with ES6 Classes #1 - People, people, people
 class Person {
   constructor(firstName = 'John',lastName = 'Doe',age = 0, gender = 'Male'){
@@ -476,5 +482,17 @@ class Man extends Human{
   
 }
 class Woman extends Human{
+  
+}
+// object oriented piracy
+class Ship {
+  constructor(draft, crew) {
+    this.draft = draft
+    this.crew = crew
+  }
+  
+  isWorthIt(){
+    return (this.draft - (this.crew * 1.5)) > 20
+  }
   
 }
