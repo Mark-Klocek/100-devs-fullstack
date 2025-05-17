@@ -410,7 +410,7 @@ class Cube {
   }
 }
 //Classy Classes
-class Person {
+class Person1 {
   constructor(name,age) {
     this.name = name
     this.age = age
@@ -419,5 +419,23 @@ class Person {
   
   
 }
-let john = new Person('john', 34)
+let john = new Person1('john', 34)
 console.log(john.info)
+//Fun with ES6 Classes #1 - People, people, people
+class Person {
+  constructor(firstName = 'John',lastName = 'Doe',age = 0, gender = 'Male'){
+      this.firstName = firstName;
+      this.lastName = lastName;
+      this.age = age;
+      this.gender = gender;
+  }
+  sayFullName(){
+    return `${this.firstName} ${this.lastName}`
+    
+  };
+  static greetExtraTerrestrials(raceName){
+    return `Welcome to Planet Earth ${raceName}`
+  }
+  
+}
+console.log(Person.greetExtraTerrestrials())
