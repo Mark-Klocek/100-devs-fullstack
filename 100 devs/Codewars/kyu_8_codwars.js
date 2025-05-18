@@ -525,7 +525,7 @@ function explode(x){
   return returnArray
 }
 console.log(explode(['a','b32']))
-//The 'spiraling' box
+//The 'spiraling' box NOTE: We are trying to find out how far away from the edge we are here.
 function createBox(m, n) {
   returnArray = []
   for (let i =0; i < n; i++){
@@ -538,3 +538,13 @@ function createBox(m, n) {
   return returnArray
 }
 console.log(createBox(5,5))
+//Return a string's even characters.
+function evenChars(string) {
+  if (string.length < 2 || string.length > 100){
+    return 'invalid string'
+  }
+  returnArray = []
+  string.split('').forEach((element,index)=> (index - 1)% 2 == 0?returnArray.push(element): '')
+  return returnArray
+}
+console.log(evenChars('asdasdasd'))
