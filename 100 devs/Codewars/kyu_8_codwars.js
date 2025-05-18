@@ -501,3 +501,26 @@ const circular = {}
 circular.value = 'Hello World'
 circular.self = circular
 console.log(circular)
+
+///
+/// 5-18-25
+///
+//Array Array Array
+function explode(x){
+  numCounter = 0
+  let total = x.reduce((acc,c) =>{
+    if (!isNaN(c)){
+      acc += c
+      numCounter ++
+    }
+    return acc
+  },0)
+  returnArray = []
+  for (i=1; i <= total; i++){
+    returnArray.push(x)
+  }
+  if (numCounter == 0){
+    return 'Void!'
+  }
+  return returnArray
+}
