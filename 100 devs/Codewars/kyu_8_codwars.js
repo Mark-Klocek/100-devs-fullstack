@@ -586,15 +586,43 @@ console.log(unusedDigits(12, 34, 56, 78))
 // 5-19-25
 //
 //Doggy Daycare
-Dog.prototype.checkDog = function(){
-  if (this.vaccinated ===true && this.wormed ===true){
-    return `${this.name} can be accepted`
-  }
+// Dog.prototype.checkDog = function(){
+//   if (this.vaccinated ===true && this.wormed ===true){
+//     return `${this.name} can be accepted`
+//   }
   
-  else if (this.vaccinated ===false && this.wormed ===false){
-    return `${this.name} can not be accepted`
+//   else if (this.vaccinated ===false && this.wormed ===false){
+//     return `${this.name} can not be accepted`
+//   }
+//   else {
+//     return `${this.name} can only be accepted by itself`
+//   }
+// }
+//Fun with ES6 Classes #4 - Cubes and Setters
+class Cube2 {
+  constructor(length){
+    this.length = length
+    
   }
-  else {
-    return `${this.name} can only be accepted by itself`
+  set volume(n){
+    this._volume = n
+    this.length = Math.cbrt(n)
+  }
+  get volume(){
+    return this.length **3
+  }
+
+  set surfaceArea(n){
+    this._surfaceArea = n
+    this.length = Math.sqrt(n / 6)
+  }
+  get surfaceArea(){
+    return 6 * (this.length **2)
   }
 }
+let cube = new Cube2(1);
+cube.length = 2;
+
+cube.volume = 125
+console.log(cube.surfaceArea)
+
