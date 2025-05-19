@@ -20,12 +20,19 @@
 /******************************************
 /* BASE STYLES
 /*******************************************/
-
-body {
-
+body{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
-
-
+img{
+  height: 500px;
+  width: 500px;
+}
+h2{
+  padding: 25px;
+}
 /******************************************
 /* LAYOUT
 /*******************************************/
