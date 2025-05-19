@@ -625,4 +625,19 @@ cube.length = 2;
 
 cube.volume = 125
 console.log(cube.surfaceArea)
+//JavaScript class-like objects
+class Animal{
+  constructor(name, type){
+    this.name = name
+    this.type = type
+  }
+  toString = function(){
+    return `${this.name} is a ${this.type}`
+  }
+}
+let dog = new Animal('Max', 'dog');
+console.log(dog.toString()); // should return 'Max is a dog'
+console.log(dog.type); // should == 'dog'
+dog.name; // should == 'Max'
+dog.name = 'Lassie'; // should set name to 'Lassie'
 
