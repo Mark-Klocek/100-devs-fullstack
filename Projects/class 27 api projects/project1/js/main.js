@@ -8,8 +8,8 @@ async function getArt(){
     await fetch('https://api.artic.edu/api/v1/artworks')
         .then(res => res.json())
         .then(data => {
-            //console.log(data.data[0])
-            ART_ID = data.data[5].id
+            console.log(data.data)
+            ART_ID = data.data[4].id
             //console.log(ART_ID)
         })
             
@@ -19,7 +19,7 @@ async function getArt(){
     await fetch(ART_URL)
         .then(res => res.json())
         .then(data => {
-            console.log(data)
+            //console.log(data)
             BASE_URL = data.config.iiif_url
             IMAGE_ID = data.data.image_id
 
