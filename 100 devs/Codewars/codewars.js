@@ -696,3 +696,19 @@ class Block{
     return (2*((this.length*this.width)+(this.length*this.height)+(this.width*this.height)))
   }
 }
+//
+// 5-20-25
+//
+// 7 kyu Magic Index 
+function findMagic(arr){
+  magicExists = -1
+  arr.forEach((element,index)=>{
+    if (element === index){
+      magicExists = index
+    }
+    
+  })
+  return magicExists
+  
+}
+console.log(findMagic([6, 5, 83, 5, 3, 18]))
