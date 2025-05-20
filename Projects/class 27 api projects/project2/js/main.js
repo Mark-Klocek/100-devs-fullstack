@@ -3,6 +3,7 @@ document.querySelector('button').addEventListener('click',buttonClicked)
 function buttonClicked(){
     let SEARCH_QUERY = document.querySelector('input').value
     console.log(SEARCH_QUERY)
+    document.getElementById('imageCollection').innerHTML = ''
     URL = `https://images-api.nasa.gov/search?q=${SEARCH_QUERY}`
     fetch(URL)
     .then(res => res.json())
@@ -16,10 +17,12 @@ function buttonClicked(){
         //RESULTS_ARRAY.forEach(element => console.log(element[href]))
         RESULTS_ARRAY.forEach(element=>{
             let LINK_ARRAY = element.links
-            if (LINK_ARRAY[LINK_ARRAY.length -1].render === 'image'){
-                document.getElementById('imageCollection').innerHTML += `<img src="${LINK_ARRAY[LINK_ARRAY.length -1].href}">`
+            let LINK_LENGTH = 0
+            let PICTURE_TITLE = element.data[0].title
+            if (LINK_ARRAY[LINK_LENGTH].render === 'image'){
+                document.getElementById('imageCollection').innerHTML += `<img src="${LINK_ARRAY[LINK_LENGTH].href}">`
             }
-            console.log(LINK_ARRAY[LINK_ARRAY.length -1])
+            console.log(PICTURE_TITLE)
         })
         //document.getElementById('imageCollection').innerHTML = `<img src="${RESULTS_ARRAY[0].href}">`
     })
