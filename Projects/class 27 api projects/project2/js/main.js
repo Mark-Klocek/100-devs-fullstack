@@ -20,7 +20,10 @@ function buttonClicked(){
             let LINK_LENGTH = 0
             let PICTURE_TITLE = element.data[0].title
             if (LINK_ARRAY[LINK_LENGTH].render === 'image'){
-                document.getElementById('imageCollection').innerHTML += `<img src="${LINK_ARRAY[LINK_LENGTH].href}">`
+                document.getElementById('imageCollection').innerHTML += `<div id="imgBox">
+                                                                            <h3>${PICTURE_TITLE}</h3>
+                                                                            <img src="${LINK_ARRAY[LINK_LENGTH].href}" alt="">
+                                                                        </div>`
             }
             console.log(PICTURE_TITLE)
         })
