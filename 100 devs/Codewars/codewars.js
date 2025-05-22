@@ -712,3 +712,28 @@ function findMagic(arr){
   
 }
 console.log(findMagic([6, 5, 83, 5, 3, 18]))
+//
+// 5-22-25
+//
+//7 kyu Thinkful - Object Drills: Quarks
+class Quark{
+  constructor(color,flavor){
+    this.color = color
+    this.flavor = flavor
+    this.baryon_number = 1/3
+  }
+  interact(obj){
+    
+    let placeHolder = obj.color
+    obj.color = this.color
+    this.color = placeHolder
+  }
+}
+let q1 = new Quark('red','up')
+console.log(q1)
+let q2 = new Quark('blue','down')
+console.log(q2)
+q1.interact(q2)
+
+console.log(q1)
+console.log(q2)
