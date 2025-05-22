@@ -730,4 +730,10 @@ class Quark{
   }
 }
 //7 kyu Thinkful - Re-open class
-String.prototype.myNewMethod = function(string){ return this.toUpperCase()}
+String.prototype.myNewMethod = function(){ return this.toUpperCase()}
+//7 kyu Can this object fly? Balloons in "Up" and real life.
+function Journey(object, crew, balloons) {
+  this.object = object
+  this.crew = crew
+  this.balloons = balloons
+}
