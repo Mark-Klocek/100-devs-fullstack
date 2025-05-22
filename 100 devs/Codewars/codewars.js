@@ -729,11 +729,5 @@ class Quark{
     this.color = placeHolder
   }
 }
-let q1 = new Quark('red','up')
-console.log(q1)
-let q2 = new Quark('blue','down')
-console.log(q2)
-q1.interact(q2)
-
-console.log(q1)
-console.log(q2)
+//7 kyu Thinkful - Re-open class
+String.prototype.myNewMethod = function(string){ return this.toUpperCase()}
