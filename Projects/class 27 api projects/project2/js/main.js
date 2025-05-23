@@ -17,10 +17,10 @@ function buttonClicked(){
         //RESULTS_ARRAY.forEach(element => console.log(element[href]))
         RESULTS_ARRAY.forEach(element=>{
             let LINK_ARRAY = element.links
-            let LINK_LENGTH = 0
+            let LINK_LENGTH = LINK_ARRAY.length - 1
             let PICTURE_TITLE = element.data[0].title
             if (LINK_ARRAY[LINK_LENGTH].render === 'image'){
-                document.getElementById('imageCollection').innerHTML += `<div id="imgBox">
+                document.getElementById('imageCollection').innerHTML +=`<div id="imgBox">
                                                                             <h3>${PICTURE_TITLE}</h3>
                                                                             <img src="${LINK_ARRAY[LINK_LENGTH].href}" alt="">
                                                                         </div>`
