@@ -747,6 +747,7 @@ function cubeOdd(arr) {
   },0)
 }
 console.log(cubeOdd(["a",12,9,"z",42]))
+//7 kyu Geometric sequence - sum of all elements
 function geometricSequenceSum(a, r, n) {
   arr = [a]
   
@@ -756,3 +757,10 @@ function geometricSequenceSum(a, r, n) {
   return arr.reduce((acc,c)=>acc+=c,0)
 }
 console.log(geometricSequenceSum(1, -2, 10))
+//7 kyu Arithmetic List!
+var seqlist = function(first,c,l){
+  let arr = [first]
+  for (i=0;i<l-1;i++) arr.push(arr[i]+c)
+  return arr
+}
+console.log(seqlist(0,1,20))
