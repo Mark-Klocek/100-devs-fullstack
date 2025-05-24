@@ -731,6 +731,9 @@ class Quark{
 }
 //7 kyu Thinkful - Re-open class
 String.prototype.myNewMethod = function(){ return this.toUpperCase()}
+//
+// 5-24-25
+//
 //7 kyu Sum of Odd Cubed Numbers
 function cubeOdd(arr) {
   if (arr.some(element => typeof element != 'number')){
@@ -744,3 +747,12 @@ function cubeOdd(arr) {
   },0)
 }
 console.log(cubeOdd(["a",12,9,"z",42]))
+function geometricSequenceSum(a, r, n) {
+  arr = [a]
+  
+  for (i = 0;i<n-1;i++){
+    arr.push(arr[i]*r)
+  }
+  return arr.reduce((acc,c)=>acc+=c,0)
+}
+console.log(geometricSequenceSum(1, -2, 10))
