@@ -789,3 +789,16 @@ function capitalize(s,arr){
   return s.split('').map((element,index)=> arr.includes(index) ? element.toUpperCase(): element).join('');
 };
 console.log(capitalize("abcdef",[1,2,5]))
+//7 kyu The old switcheroo 2
+function encode(str) {
+  
+  return str.split('').map((element)=> {
+    if (element.toLowerCase().charCodeAt(0)-96 < 0 || element.toLowerCase().charCodeAt(0)-96 > 26){
+      return element
+    }
+    else{
+      return element.toLowerCase().charCodeAt(0)-96
+    }
+  } ).join('')
+}
+console.log(encode("!@ZSDW%^&*()_-{}{}{}{}{"))
