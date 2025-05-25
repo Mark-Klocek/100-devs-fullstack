@@ -781,3 +781,11 @@ function shiftLeft(s, t){
 }
 console.log(shiftLeft('1','1'))
 
+//
+// 5-25-25
+//
+//7 kyu Indexed capitalization
+function capitalize(s,arr){
+  return s.split('').map((element,index)=> arr.includes(index) ? element.toUpperCase(): element).join('');
+};
+console.log(capitalize("abcdef",[1,2,5]))
