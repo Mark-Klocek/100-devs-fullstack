@@ -68,3 +68,52 @@ console.log(`Look, a cat! ${fang.name} barks: ${fang.bark()}`);
 const snowy = new Dog("Snowy", "terrier", 22);
 console.log(`${snowy.name} is a ${snowy.species} dog measuring ${snowy.size}`);
 console.log(`Look, a cat! ${snowy.name} barks: ${snowy.bark()}`);
+
+class Character {
+  constructor(name, health, strength) {
+    this.name = name;
+    this.health = health;
+    this.strength = strength;
+    this.xp = 0;
+    this.inventory = {
+        'gold':10,
+        'keys':1
+    }
+  }
+  // Attack a target
+  attack(target) {
+    if (this.health > 0) {
+      const damage = this.strength;
+      console.log(
+        `${this.name} attacks ${target.name} and causes ${damage} damage points`
+      );
+      target.health -= damage;
+      if (target.health > 0) {
+        console.log(`${target.name} has ${target.health} health points left`);
+      } else {
+        target.health = 0;
+        const bonusXP = 10;
+        console.log(
+          `${this.name} eliminated ${target.name} and wins ${bonusXP} experience points\n They also gain ${target.inventory.gold}g and ${target.inventory.keys}keys from ${target.name}!`
+        );
+        this.inventory.gold += target.inventory.gold
+        this.inventory.keys += target.inventory.keys
+        this.xp += bonusXP;
+      }
+    } else {
+      console.log(`${this.name} can’t attack (they've been eliminated)`);
+    }
+  }
+  // Return the character description
+  describe() {
+    return `${this.name} has ${this.health} health points, ${this
+      .strength} as strength and ${this.xp} XP points \n His current inventory includes ${this.inventory.gold}g and ${this.inventory.keys}key(s)`;
+  }
+}
+
+let mark = new Character('Mark',200,50)
+let russ = new Character('Russell',50,0)
+console.log(mark.describe())
+console.log(russ.describe())
+mark.attack(russ)
+console.log(mark.describe())
