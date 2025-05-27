@@ -33,4 +33,4 @@ console.log(molly.describe())
 
 let ralph = new Horse('Ralph',5,2,'male')
 
-console.log(ralph.describe())
+console.log(ralph)
