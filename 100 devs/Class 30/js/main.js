@@ -117,3 +117,23 @@ console.log(mark.describe())
 console.log(russ.describe())
 mark.attack(russ)
 console.log(mark.describe())
+
+class Account{
+    constructor(name){
+        this.balance = 0
+        this.name = name
+    }
+    credit(n){
+        this.balance += n
+    }
+    describe(){
+        return `This account belongs to ${this.name}. He/she currently has $${this.balance} in their account.`
+    }
+}
+
+bankMembers = [new Account('Sean'),new Account('Brad'),new Account('Georges')]
+
+for (member of bankMembers){
+    member.credit(1000)
+    console.log(member.describe())
+}
