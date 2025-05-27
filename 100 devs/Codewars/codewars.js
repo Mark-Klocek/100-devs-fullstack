@@ -966,3 +966,20 @@ function arrayMadness(a, b) {
   return a.reduce((acc,c) => acc+= c**2,0) > b.reduce((acc,c)=>acc+= c**3,0)
 }
 console.log(arrayMadness([4,5,6],[1,2,3]))
+//7 kyu zero-balanced Array
+function ìsZeroBalanced(n){
+  zeroBalanced = true
+  if (n.length == 0) return false
+  n.forEach((element,index)=>{
+    if (!n.includes(element * -1)){
+      zeroBalanced = false
+    }
+    else{
+      delete n[n.indexOf(element * -1)]
+    }
+  })
+
+  return zeroBalanced
+}
+
+console.log(ìsZeroBalanced(([3, -3, 5, -5, 7, -7])))
