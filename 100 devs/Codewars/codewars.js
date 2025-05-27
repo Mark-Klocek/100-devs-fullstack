@@ -887,3 +887,17 @@ function height(n) {
   return totalCat.toFixed(3)
 }
 console.log(height(7))
+//
+// 5-26-25
+//
+// 7 kyu nova polynomial 4. derivative
+function polyDerivative(p) {
+  let arr = []
+  p.forEach((element,index)=>{
+    if (element * index > 0){
+      arr.push(element*index)
+    }
+  })
+  return arr
+}
+console.log(polyDerivative([9, 1, 3]))
