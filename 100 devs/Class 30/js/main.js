@@ -51,3 +51,6 @@ group.add(10);
 group.delete(10);
 console.log(group.has(10));
 // → false
+for (let value of Group.from(["a", "b", "c"])) {
+  console.log(value);
+}
