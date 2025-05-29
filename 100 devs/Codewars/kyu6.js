@@ -73,3 +73,21 @@ function inSphere(coords, radius) {
 }
 console.log(inSphere([66.14272,66.57249,0.42063,48.18087,15.88034,15.90368], 90))
 
+//
+//5-28-25
+//
+// 6 kyu Convert integer to Whitespace format
+function whitespaceNumber(n) {
+    returnString = ''
+    if (n > 0) returnString += ' 1'
+    
+    nBinary = n.toString(2)
+    if (n < 0) {
+        nBinary = nBinary.slice(1)
+        returnString += '\\t'
+    }
+
+    nBinary.split('').forEach((element)=> element == '1'? returnString+= '\\t':returnString+= ' ')
+    return returnString += '\\n';
+  }
+console.log((whitespaceNumber(0)))
