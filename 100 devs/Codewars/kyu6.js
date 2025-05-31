@@ -320,3 +320,34 @@ function digitRacers(str) {
 
 
 console.log(digitRacers("5501234567789"))
+
+//7kyu dot calculator
+function dotCalculator(equation) {
+  const [left, operator, right] = equation.split(' ');
+  const a = left.length;
+  const b = right.length;
+
+  switch (operator) {
+    case '+':
+      return '.'.repeat(a + b);
+    case '-':
+      return '.'.repeat(a - b);
+    case '*':
+      return '.'.repeat(a * b);
+    case '//':
+      return '.'.repeat(Math.floor(a / b));
+    default:
+      return '';
+  }
+}
+//8 kyu crash override
+function aliasGen(first, last) {
+  const f = first[0].toUpperCase();
+  const l = last[0].toUpperCase();
+
+  if (!/^[A-Z]$/.test(f) || !/^[A-Z]$/.test(l)) {
+    return "Your name must start with a letter from A - Z.";
+  }
+
+  return `${firstName[f]} ${surname[l]}`;
+}
