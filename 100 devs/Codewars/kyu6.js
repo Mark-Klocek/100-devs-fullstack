@@ -351,3 +351,12 @@ function aliasGen(first, last) {
 
   return `${firstName[f]} ${surname[l]}`;
 }
+//
+//6-1-25
+//
+// 8kyu pirates!! Are the cannons ready!??
+function cannonsReady(gunners) {
+  return Object.values(gunners).every(answer => answer === 'aye')
+    ? 'Fire!'
+    : 'Shiver me timbers!';
+}
