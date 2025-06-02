@@ -384,3 +384,16 @@ function generateLink(user) {
   return `http://www.codewars.com/users/${encodeURIComponent(user)}`;
 }
 
+//
+//6-2-25
+//
+//8 kyu incorrect division method
+const solve = (x, y) => x / y
+
+//8 kyu 
+
+//8 kyu 
+
+//8 kyu 
+
+//8 kyu 
