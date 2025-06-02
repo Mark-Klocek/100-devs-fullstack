@@ -395,7 +395,10 @@ function circleCircumference(circle) {
   return +(2 * Math.PI * circle.radius).toFixed(6);
 }
 
-//8 kyu 
+//8 kyu Points of Reflection
+function symmetricPoint(p, q) {
+  return [2 * q[0] - p[0], 2 * q[1] - p[1]];
+}
 
 //8 kyu 
 
