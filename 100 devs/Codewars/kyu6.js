@@ -406,4 +406,7 @@ function remove(string) {
 }
 
 
-//8 kyu 
+//8 kyu grasshopper
+function greet(name, owner) {
+  return name === owner ? 'Hello boss' : 'Hello guest';
+}
