@@ -400,6 +400,10 @@ function symmetricPoint(p, q) {
   return [2 * q[0] - p[0], 2 * q[1] - p[1]];
 }
 
-//8 kyu 
+//8 kyu remove
+function remove(string) {
+  return string.replace(/!+$/, '');
+}
+
 
 //8 kyu 
