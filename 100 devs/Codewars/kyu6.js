@@ -390,7 +390,10 @@ function generateLink(user) {
 //8 kyu incorrect division method
 const solve = (x, y) => x / y
 
-//8 kyu 
+//8 kyu  Geometry Basics: Circle Circumference in 2D
+function circleCircumference(circle) {
+  return +(2 * Math.PI * circle.radius).toFixed(6);
+}
 
 //8 kyu 
 
