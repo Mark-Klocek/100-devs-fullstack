@@ -417,3 +417,7 @@ function greet(name, owner) {
 function litres(time) {
   return Math.floor(time * 0.5);
 }
+// making six
+function sixToast(num) {
+  return Math.abs(num - 6);
+}
