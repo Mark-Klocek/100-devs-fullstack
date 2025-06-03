@@ -413,3 +413,7 @@ function greet(name, owner) {
 //
 //6-3-25
 //
+// keep hydrated
+function litres(time) {
+  return Math.floor(time * 0.5);
+}
