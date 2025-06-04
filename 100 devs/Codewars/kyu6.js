@@ -476,3 +476,9 @@ function finalGrade (exam, projects) {
   }
 }
 console.log(finalGrade(10, 15))
+//7 kyu Heron's formula
+function heron(a, b, c) {
+  let g = (a + b + c)/ 2
+  return Math.sqrt(g * (g-a) * (g-b)*(g-c))
+}
+console.log(heron(4, 4, 4))
