@@ -3,7 +3,7 @@ function houseOne(){
     console.log('Paper delivered to house 1')
 }
 function houseTwo(){
-    setTimeout(()=>console.log('Paper delivered to house 2'),2000)
+    setTimeout(()=>console.log('Paper delivered to house 2'),0)
 }
 function houseThree(){
     console.log('Paper delivered to house 3')
