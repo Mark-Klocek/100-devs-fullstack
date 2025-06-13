@@ -1,6 +1,6 @@
 //Code 01
 function houseOne(){
-    console.log('Paper delivered to house 1')
+    setTimeout(()=>console.log('Paper delivered to house 1'),0)
 }
 function houseTwo(){
     setTimeout(()=>console.log('Paper delivered to house 2'),0)
