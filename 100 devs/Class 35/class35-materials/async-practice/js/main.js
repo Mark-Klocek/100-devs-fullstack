@@ -20,41 +20,38 @@
 //     setTimeout(() => console.log('Paper delivered to house 2'), 3000)
 // }
 // function houseThree(){
-//     console.log('Paper delivered to house 3')
+//     setTimeout(() => console.log('Paper delivered to house 3'), 1000)
 // }
 // houseOne()
 // houseTwo()
 // houseThree()
 
 //Code 03
-function houseOne(){
-    console.log('Paper delivered to house 1')
-}
-function houseTwo(callback){
-    setTimeout(() => {
-        console.log('Paper delivered to house 2')
-        setTimeout(()=>callback(),1000)
-    }, 3000)
-}
-function houseThree(){
-    console.log('Paper delivered to house 3')
-}
-houseOne()
-houseTwo(houseThree)
+// function houseOne(){
+//     console.log('Paper delivered to house 1')
+// }
+// function houseTwo(callback){
+//     setTimeout(() => {
+//         console.log('Paper delivered to house 2')
+//         setTimeout(()=>callback(),1000)
+//     }, 3000)
+// }
+// function houseThree(){
+//     console.log('Paper delivered to house 3')
+// }
+// houseOne()
+// houseTwo(houseThree)
 
 //Code 04
 // function houseOne(){
-//     setTimeout(() => {
-//         console.log('Paper delivered to house 1')
-//         setTimeout(() => {
-//             console.log('Paper delivered to house 2')
-//             setTimeout(() => {
-//                 console.log('Paper delivered to house 3')
-//             }, 3000)
-//         }, 4000)
-//     }, 5000)
+//     return new Promise(function(err,resolve){
+//         resolve = console.log('house 1')
+//     })
 // }
 // houseOne()
+//     .then(houseTwo())
+//     .then(houseThree())
+
 
 //Code 05
 // const promise = new Promise((resolve, reject) => {
