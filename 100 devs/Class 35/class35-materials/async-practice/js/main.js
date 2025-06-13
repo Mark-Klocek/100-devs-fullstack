@@ -54,18 +54,15 @@
 
 
 //Code 05
-// const promise = new Promise((resolve, reject) => {
-//     const error = false
-//     if(!error){
-//         resolve('Promise has been fullfilled')
-//     }else{
-//         reject('Error: Operation has failed')
-//     }
-// })
-// console.log(promise)
-// promise
-//     .then(data => console.log(data))
-//     .catch(err => console.log(err))
+const promise = new Promise((resolve,reject)=>{
+    const error = true
+    if (!error){resolve('resolved correctly!')}
+    else if (error){reject('there was an error')}
+})
+console.log(promise)
+promise
+    .then(data => console.log(data))
+    .catch(err => console.log(err))
 
 //Code 06
 // function houseOne(){
