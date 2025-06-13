@@ -1,16 +1,16 @@
 //Code 01
-function houseOne(){
-    setTimeout(()=>console.log('Paper delivered to house 1'),0)
-}
-function houseTwo(){
-    setTimeout(()=>console.log('Paper delivered to house 2'),0)
-}
-function houseThree(){
-    console.log('Paper delivered to house 3')
-}
-houseOne()
-houseTwo()
-houseThree()
+// function houseOne(){
+//     setTimeout(()=>console.log('Paper delivered to house 1'),0)
+// }
+// function houseTwo(){
+//     setTimeout(()=>console.log('Paper delivered to house 2'),0)
+// }
+// function houseThree(){
+//     console.log('Paper delivered to house 3')
+// }
+// houseOne()
+// houseTwo()
+// houseThree()
 
 //Code 02
 // function houseOne(){
@@ -27,20 +27,20 @@ houseThree()
 // houseThree()
 
 //Code 03
-// function houseOne(){
-//     console.log('Paper delivered to house 1')
-// }
-// function houseTwo(callback){
-//     setTimeout(() => {
-//         console.log('Paper delivered to house 2')
-//         callback()
-//     }, 3000)
-// }
-// function houseThree(){
-//     console.log('Paper delivered to house 3')
-// }
-// houseOne()
-// houseTwo(houseThree)
+function houseOne(){
+    console.log('Paper delivered to house 1')
+}
+function houseTwo(callback){
+    setTimeout(() => {
+        console.log('Paper delivered to house 2')
+        setTimeout(()=>callback(),1000)
+    }, 3000)
+}
+function houseThree(){
+    console.log('Paper delivered to house 3')
+}
+houseOne()
+houseTwo(houseThree)
 
 //Code 04
 // function houseOne(){
