@@ -13,18 +13,34 @@
 // houseThree()
 
 //Code 02
-// function houseOne(){
-//     console.log('Paper delivered to house 1')
-// }
-// function houseTwo(){
-//     setTimeout(() => console.log('Paper delivered to house 2'), 3000)
-// }
-// function houseThree(){
-//     console.log('Paper delivered to house 3')
-// }
-// houseOne()
-// houseTwo()
-// houseThree()
+function houseOne(){
+    return new Promise((resolve,reject)=>{
+        (setTimeout(()=>resolve('house1'), 5000))
+    })
+}
+function houseTwo(){
+    return new Promise((resolve,reject)=>{
+        (setTimeout(()=>resolve('house2'), 3000))
+    })
+}
+function houseThree(){
+    return new Promise((resolve,reject)=>{
+        (setTimeout(()=>resolve('house3'), 1000))
+    })
+}
+
+async function threeHouse(){
+    const houseOne1 = await houseOne()
+    const houseTwo1 = await houseTwo()
+    const houseThree1 = await houseThree()
+    console.log(houseOne1)
+    console.log(houseTwo1)
+    console.log(houseThree1)
+    
+    
+}
+
+threeHouse()
 
 //Code 03
 // function houseOne(){
