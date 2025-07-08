@@ -2,6 +2,8 @@ const http = require('http')
 const express = require('express')
 const app = express()
 const PORT = 3001
+
+app.use(express.json())
 let notes = [  
     {    
         id: "1",    
@@ -41,6 +43,12 @@ app.delete('/api/notes/:id',(request,response)=>{
     notes = notes.filter(note => note.id !== id)
 
     response.status(204).end()
+})
+app.post('/api/notes',(request,response)=>{
+    const note = request.body
+    notes.push(note)
+    console.log(note)
+    response.json(note)
 })
 
 
