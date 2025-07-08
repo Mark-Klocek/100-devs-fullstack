@@ -80,7 +80,7 @@ const rappers = {
     'birth location': 'Los Angeles, California'
   },
   'oops':{
-    'response':'this rapper isnt in our database!'
+    'does not exist':'this rapper isnt in our database!'
   }
 };
 
