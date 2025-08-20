@@ -76,3 +76,20 @@ warr.sort((a,b)=>b-a)
 // ... your code to sort it in decreasing order
 
 console.log( warr ); // 8, 5, 2, 1, -10
+
+// Copy and sort array
+// importance: 5
+
+// We have an array of strings arr. We’d like to have a sorted copy of it, but keep arr unmodified.
+
+// Create a function copySorted(arr) that returns such a copy.
+
+let earr = ["HTML", "JavaScript", "CSS"];
+function copySorted (arr){
+    copyArr = [...arr]
+    return copyArr.sort()
+}
+let sorted = copySorted(earr);
+
+console.log( sorted ); // CSS, HTML, JavaScript
+console.log( earr ); // HTML, JavaScript, CSS (no changes)
