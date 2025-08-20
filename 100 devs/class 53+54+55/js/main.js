@@ -111,3 +111,34 @@ let names = users.map(element =>{
 })
 
 console.log( names ); // John, Pete, Mary
+
+
+// Map to objects
+// importance: 5
+
+// You have an array of user objects, each one has name, surname and id.
+
+// Write the code to create another array from it, of objects with id and fullName, where fullName is generated from name and surname.
+
+// For instance:
+
+john = { name: "John", surname: "Smith", id: 1 };
+pete = { name: "Pete", surname: "Hunt", id: 2 };
+mary = { name: "Mary", surname: "Key", id: 3 };
+
+users = [ john, pete, mary ];
+
+let usersMapped = users.map(element=>{
+    return {fullName : `${element.name} ${element.surname}`, id: element.id}
+})
+
+/*
+usersMapped = [
+  { fullName: "John Smith", id: 1 },
+  { fullName: "Pete Hunt", id: 2 },
+  { fullName: "Mary Key", id: 3 }
+]
+*/
+
+console.log( usersMapped[0].id ) // 1
+console.log( usersMapped[0].fullName ) // John Smith
