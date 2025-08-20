@@ -66,3 +66,13 @@ function filterRangeInPlace(arr,a,b){
 filterRangeInPlace(qarr, 1, 4); // removed the numbers except from 1 to 4
 
 console.log( qarr ); // [3, 1]
+
+// Sort in decreasing order
+// importance: 4
+
+let warr = [5, 2, 1, -10, 8];
+
+warr.sort((a,b)=>b-a)
+// ... your code to sort it in decreasing order
+
+console.log( warr ); // 8, 5, 2, 1, -10
