@@ -49,3 +49,20 @@ let filtered = filterRange(arr, 1, 4);
 // Compare arrays by their string representation
 console.log(filtered.toString() === [3,1].toString()); // true if matching values
 
+// Write a function filterRangeInPlace(arr, a, b) that gets an array arr and removes from it all values except those that are between a and b. The test is: a ≤ arr[i] ≤ b.
+
+// The function should only modify the array. It should not return anything.
+
+// For instance:
+
+let qarr = [5, 3, 8, 1];
+function filterRangeInPlace(arr,a,b){
+    arr.forEach((element,index)=>{
+        if (element > b || element < a){
+            arr.splice(index,1)
+        }
+    })
+}
+filterRangeInPlace(qarr, 1, 4); // removed the numbers except from 1 to 4
+
+console.log( qarr ); // [3, 1]
